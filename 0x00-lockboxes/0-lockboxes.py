@@ -17,11 +17,12 @@ def canUnlockAll(boxes):
 
     op_en = [False] * len(boxes)
     op_en[0] = True
-    key = [0]       
+    key = [0]
+
     while key:
         lis = key.pop()
         for i in boxes[lis]:
-            if not op_en[i]: 
-                op_en[i] = True 
+            if not op_en[i]:
+                op_en[i] = True
                 key.append(i)
-    return all(op_en) 
+    return all(op_en)
