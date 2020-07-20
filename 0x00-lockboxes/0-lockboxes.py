@@ -15,14 +15,14 @@ def canUnlockAll(boxes):
     #         li.append(boxes[0])
     # print(li, end=" ")
 
-    op_en = [False] * len(boxes)
-    op_en[0] = True
+    box = len(boxes) * [False]
+    box[0] = True
     key = [0]
 
-    while key:
-        lis = key.pop()
-        for i in boxes[lis]:
-            if not op_en[i]:
-                op_en[i] = True
-                key.append(i)
-    return all(op_en)
+    for e in range(len(boxes)):
+        for i in boxes[e]:
+            if not box[i]:
+                if boxes[e] is not boxes[i]:
+                    box[i] = True
+                    key.append(i)
+    return all(box)
