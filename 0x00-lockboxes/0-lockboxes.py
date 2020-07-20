@@ -23,5 +23,5 @@ def canUnlockAll(boxes):
         for i in boxes[e]:
             if boxes[e] is not boxes[i]:
                 box[i] = True
-                key.append(i)    
+                key.append(i)
     return all(box)
