@@ -14,7 +14,6 @@ def canUnlockAll(boxes):
     keys = [0]
 
     for each in keys:
-        print(each, end=" ")
         for i in boxes[each]:
             if i not in keys:
                 if i < len(boxes):
