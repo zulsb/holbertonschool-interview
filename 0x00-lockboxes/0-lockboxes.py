@@ -9,19 +9,14 @@ def canUnlockAll(boxes):
         Arg:
             boxes: Is a list of lists.
     """
-    # li = []
-    # for i in range(len(boxes)):
-    #     for o in boxes[i]:
-    #         li.append(boxes[0])
-    # print(li, end=" ")
-
     box = len(boxes) * [False]
     box[0] = True
     key = [0]
 
-    for e in range(len(boxes)):
-        for i in boxes[e]:
-            if boxes[e] is not boxes[i]:
-                box[i] = True
-                key.append(i)
+    for each in range(len(boxes)):
+        for i in boxes[each]:
+            if boxes[each] is not boxes[i]:
+                if i not in key and i < len(boxes):
+                    box[i] = True
+                    key.append(i)
     return all(box)
