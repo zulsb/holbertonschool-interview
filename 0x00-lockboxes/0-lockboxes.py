@@ -13,11 +13,11 @@ def canUnlockAll(boxes):
     box[0] = True
     keys = [0]
 
-    for each in range(len(boxes)):
-        for i in boxes[each]:
-            if keys:
+    if keys:
+        for each in range(len(boxes)):
+            for i in boxes[each]:
                 if boxes[each] is not boxes[i]:
                     box[i] = True
                 if i not in keys and i < len(boxes):
                     keys.append(i)
-    return all(box)
+        return all(box)
