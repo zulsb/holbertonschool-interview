@@ -7,7 +7,7 @@ Make a method that determines if all the boxes can be opened in a list of lists 
 ---
 
 ## Tasks
-#### [0x00. Lockboxes](./0x00-lockboxes) 
+#### [0. Lockboxes](./0-lockboxes.py) 
 
 ---
 
