@@ -18,4 +18,3 @@ Make a method that determines if all the boxes can be opened in a list of lists 
 
 Cohort 10
 Colombia - Cali - 2020
-# Lockboxes
