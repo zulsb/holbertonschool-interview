@@ -30,7 +30,13 @@ struct binary_tree_t
 };
 typedef struct binary_tree_t binary_tree_t;
 
-binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+/* Functions printing */
 void binary_tree_print(const binary_tree_t *tree);
+
+/** 0. Function that creates a binary tree node */
+binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
+
+/** 1. Function that inserts a value into a Max Binary Heap */
+heap_t *heap_insert(heap_t **root, int value);
 
 #endif
