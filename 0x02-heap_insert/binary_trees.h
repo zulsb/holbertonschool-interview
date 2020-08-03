@@ -29,6 +29,7 @@ struct binary_tree_t
 	struct binary_tree_t *right;
 };
 typedef struct binary_tree_t binary_tree_t;
+typedef struct binary_tree_t heap_t;
 
 /* Functions printing */
 void binary_tree_print(const binary_tree_t *tree);
