@@ -31,6 +31,12 @@ struct binary_tree_t
 typedef struct binary_tree_t binary_tree_t;
 typedef struct binary_tree_t heap_t;
 
+typedef struct queue
+{
+	struct queue *next;
+	struct binary_tree_t *element;
+} queue;
+
 /* Functions printing */
 void binary_tree_print(const binary_tree_t *tree);
 
