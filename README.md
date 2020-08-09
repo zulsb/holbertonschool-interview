@@ -13,6 +13,8 @@ Projects carried out in the specialization for the preparation of interviews and
 * Make a function in C that inserts a number into a sorted singly linked list.
 #### [0x02. Heap Insert](./0x02-heap_insert)
 * Make a function that creates a binary tree node and a function that inserts a value into a Max Binary Heap.
+#### [0x03. Minimum Operations](./0x03-minimum_operations)
+* The fewest number of operations required are calculated to result in exactly n H characters in the file.
 
 ---
 
