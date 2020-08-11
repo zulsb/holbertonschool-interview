@@ -18,6 +18,6 @@ def minOperations(n):
                 n = n / 2
             else:
                 n += 1
-            count += 1
+            count += 2
         return count
     return 0
