@@ -12,13 +12,14 @@ def minOperations(n):
             n: Is a number to print H characters.
     """
     count = 0
+    seg_ment = 2
+    
     if n:
-        while n > 1:
-            if n % 2 == 0:
-                n = n // 2
-                count += 2
+        while n != 1:
+            if n % seg_ment == 0:
+                n = n // seg_ment
+                count += seg_ment
             else:
-                n += 1
-                count -= 1
+                seg_ment += 1
         return count
     return 0
