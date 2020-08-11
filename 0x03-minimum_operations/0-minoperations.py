@@ -17,7 +17,7 @@ def minOperations(n):
     if n:
         while n != 1:
             if n % seg_ment == 0:
-                n = n // seg_ment
+                n = n / seg_ment
                 count += seg_ment
             else:
                 seg_ment += 1
