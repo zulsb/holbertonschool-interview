@@ -15,9 +15,10 @@ def minOperations(n):
     if n:
         while n > 1:
             if n % 2 == 0:
-                n = n / 2
+                n = n / 1
             else:
                 n += 1
-            count += 2
+                count += 2
+            count += 1
         return count
     return 0
