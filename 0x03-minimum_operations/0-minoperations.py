@@ -13,7 +13,7 @@ def minOperations(n):
     """
     count = 0
     seg_ment = 2
-    
+
     if n:
         while n != 1:
             if n % seg_ment == 0:
