@@ -2,8 +2,8 @@
 
 /**
  * sandpiles_sum - Function that computes the sum of two sandpiles.
- * @grid1: Matrix 1 int type.
- * @grid2: Matrix 2 int type.
+ * @grid1: Sandpile 1 int type.
+ * @grid2: Sandpile 2 int type.
  *
  * Return: nothing.
 */
