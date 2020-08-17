@@ -10,7 +10,7 @@
 
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
-	int row, column, stable = 0;
+	int row, column;
 
 
 	for (row = 0; row < 3; row++)
@@ -18,10 +18,6 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 		for (column = 0; column < 3; column++)
 		{
 			grid1[row][column] = grid1[row][column] + grid2[row][column];
-			if (grid1[row][column] > 3 && !stable)
-				stable = 1;
 		}
 	}
-	if (!stable)
-		return;
 }
