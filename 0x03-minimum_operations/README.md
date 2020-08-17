@@ -6,7 +6,7 @@ The fewest number of operations required are calculated to result in exactly n H
 
 ---
 
-## Tasks
+## Content
 #### [0. Minimum Operations](./0-minoperations.py) 
 
 ---
@@ -16,5 +16,5 @@ The fewest number of operations required are calculated to result in exactly n H
 - Github: [zulsb](https://github.com/zulsb)
 - Twitter: [@LuzSanchezB](https://twitter.com/LuzSanchezB)
 
-Cohort 10
-Colombia - Cali - 2020
+Cohort 10 |
+Cali, Colombia 2020
