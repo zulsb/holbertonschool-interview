@@ -10,7 +10,7 @@
 
 void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 {
-	int row = 0, column = 0;
+	int row, column;
 
 
 	for (row = 0; row < 3; row++)
