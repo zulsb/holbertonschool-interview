@@ -6,7 +6,7 @@ Make a function that creates a binary tree node and a function that inserts a va
 
 ---
 
-## Tasks
+## Content
 #### [0. New node](./0-binary_tree_node.c)
 #### [1. Heap - Insert](./1-heap_insert.c)  
 
@@ -17,5 +17,5 @@ Make a function that creates a binary tree node and a function that inserts a va
 - Github: [zulsb](https://github.com/zulsb)
 - Twitter: [@LuzSanchezB](https://twitter.com/LuzSanchezB)
 
-Cohort 10
-Colombia - Cali - 2020
+Cohort 10 |
+Cali, Colombia 2020
