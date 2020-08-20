@@ -69,7 +69,10 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 	for (row = 0; row < 3; row++)
 	{
 		for (column = 0; column < 3; column++)
+		{
 			grid1[row][column] = grid1[row][column] + grid2[row][column];
+			grid2[row][column] = 0;
+		}
 	}
 
 	while (stable(grid1) == 0)
@@ -87,5 +90,14 @@ void sandpiles_sum(int grid1[3][3], int grid2[3][3])
 		}
 
 		distribution(grid1, grid2);
+
+		for (row = 0; row < 3; row++)
+		{
+			for (column = 0; column < 3; column++)
+			{
+				grid1[row][column] = grid1[row][column] + grid2[row][column];
+				grid2[row][column] = 0;
+			}
+		}
 	}
 }
