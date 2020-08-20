@@ -7,7 +7,7 @@ Function that computes the sum of two sandpiles.
 ---
 
 ## Content
-#### [0. Sandpiles sum](./0-sandpiles.c) 
+#### 0. Sandpiles sum --> [Function file](./0-sandpiles.c) 
 
 ---
 
