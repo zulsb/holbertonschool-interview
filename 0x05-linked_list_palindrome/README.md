@@ -1,4 +1,4 @@
-![Banner](banner-palindrome.gif)
+![Banner](https://user-images.githubusercontent.com/7723544/90972198-94e20580-e4dc-11ea-8337-8a42d0a96cef.gif)
 
 ## Description
 
