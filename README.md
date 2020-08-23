@@ -17,6 +17,8 @@ Projects carried out in the specialization for the preparation of interviews and
 * The fewest number of operations required are calculated to result in exactly n H characters in the file.
 #### [0x04. Sandpiles](./0x04-sandpiles)
 * Function that computes the sum of two sandpiles.
+#### [0x05. Linked list palindrome](./0x05-linked_list_palindrome)
+* Function in C that checks if a singly linked list is a palindrome.
 
 ---
 
