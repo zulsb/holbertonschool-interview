@@ -2,13 +2,14 @@
 """Module that reads stdin line by line and print metrics"""
 from sys import stdin
 
-stat = {"200": 0, "301": 0, "400": 0, "401": 0,
-        "403": 0, "404": 0, "405": 0, "500": 0}
 
 if __name__ == "__main__":
 
+    stat = {"200": 0, "301": 0, "400": 0, "401": 0,
+            "403": 0, "404": 0, "405": 0, "500": 0}
     ctr = 0
     total_size = 0
+
     try:
         for line in stdin:
             status_code = line.split('"')[2].split(" ")[1]
