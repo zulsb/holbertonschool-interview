@@ -22,18 +22,18 @@ if __name__ == "__main__":
                     stat[key] += 1
             if ctr == 10:
                 print("File size: {:d}".format(total_size))
-                for key in sorted(stat.keys()):
-                    if stat[key]:
+                for key, v in sorted(stat.items()):
+                    if v > 0:
                         print("{}: {:d}".format(key, stat[key]))
                 ctr = 0
 
     except KeyboardInterrupt:
         print("File size: {:d}".format(total_size))
-        for key in sorted(stat.keys()):
-            if stat[key]:
+        for key, v in sorted(stat.items()):
+            if v > 0:
                 print("{}: {:d}".format(key, stat[key]))
         raise
     print("File size: {:d}".format(total_size))
-    for key in sorted(stat.keys()):
-        if stat[key]:
+    for key, v in sorted(stat.items()):
+        if v > 0:
             print("{}: {:d}".format(key, stat[key]))
