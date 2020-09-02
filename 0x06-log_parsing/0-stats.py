@@ -15,9 +15,12 @@ if __name__ == "__main__":
             total_size += size
             ctr += 1
 
-            for key in sorted(stat.keys()):
-                if status_code == key:
-                    stat[key] += 1
+            try:
+                for key in sorted(stat.keys()):
+                    if status_code == key:
+                        stat[key] += 1
+            except:
+                pass
             if ctr == 10:
                 print("File size: {:d}".format(total_size))
                 for key in sorted(stat.keys()):
@@ -31,6 +34,7 @@ if __name__ == "__main__":
             if stat[key]:
                 print("{}: {:d}".format(key, stat[key]))
         raise
+
     print("File size: {:d}".format(total_size))
     for key in sorted(stat.keys()):
         if stat[key]:
