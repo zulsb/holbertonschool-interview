@@ -1,15 +1,23 @@
 #!/usr/bin/python3
-"""Script that reads stdin line by line and print metrics"""
-import sys
+"""Module that reads stdin line by line and print metrics"""
+from sys import stdin
 
 stat = {"200": 0, "301": 0, "400": 0, "401": 0,
         "403": 0, "404": 0, "405": 0, "500": 0}
 ctr = 0
 total_size = 0
 
+def prints():
+    """Print metrics"""
+    print("File size: ", total_size)
+    for key in sorted(stat.keys()):
+        if stat[key]:
+            print("{}: {:d}".format(key, stat[key]))
+
+
 if __name__ == "__main__":
     try:
-        for line in sys.stdin:
+        for line in stdin:
             status_code = line.split('"')[2].split(" ")[1]
             size = int(line.split('"')[2].split(" ")[2])
             total_size += size
@@ -20,18 +28,9 @@ if __name__ == "__main__":
                     stat[key] += 1
             if ctr == 10:
                 ctr = 0
-                print("File size: ", total_size)
-                for key in sorted(stat.keys()):
-                    if stat[key]:
-                        print("{:s}: {:d}".format(key, stat[key]))
+                prints()
 
     except KeyboardInterrupt:
-        print("File size: ", total_size)
-        for key in sorted(stat.keys()):
-            if stat[key]:
-                print("{:s}: {:d}".format(key, stat[key]))
+        prints()
         raise
-    print("File size: ", total_size)
-    for key in sorted(stat.keys()):
-        if stat[key]:
-            print("{:s}: {:d}".format(key, stat[key]))
+    prints()
