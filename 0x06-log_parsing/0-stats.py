@@ -33,5 +33,3 @@ except KeyboardInterrupt:
     prints()
     raise
 prints()
-
-if __name__ == "__main__":
