@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """Module that reads stdin line by line and print metrics"""
-from sys import stdin
+import sys
 
 
 if __name__ == "__main__":
@@ -11,7 +11,7 @@ if __name__ == "__main__":
     total_size = 0
 
     try:
-        for line in stdin:
+        for line in sys.stdin:
             status_code = line.split('"')[2].split(" ")[1]
             size = int(line.split('"')[2].split(" ")[2])
             total_size += size
@@ -32,7 +32,6 @@ if __name__ == "__main__":
         for key in sorted(stat.keys()):
             if stat[key]:
                 print("{}: {:d}".format(key, stat[key]))
-        raise
     print("File size: {:d}".format(total_size))
     for key in sorted(stat.keys()):
         if stat[key]:
