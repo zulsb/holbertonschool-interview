@@ -15,11 +15,9 @@ if __name__ == "__main__":
             size = int(line.split('"')[2].split(" ")[2])
             total_size += size
             ctr += 1
-           
             for key in sorted(stat.keys()):
                 if status_code == key:
                     stat[key] += 1
-            
             if ctr == 10:
                 print("File size: {:d}".format(total_size))
                 for key in sorted(stat.keys()):
@@ -28,13 +26,9 @@ if __name__ == "__main__":
                 ctr = 0
 
     except KeyboardInterrupt:
+        pass
+    finally:
         print("File size: {:d}".format(total_size))
         for key in sorted(stat.keys()):
             if stat[key]:
                 print("{}: {:d}".format(key, stat[key]))
-        raise
-
-    print("File size: {:d}".format(total_size))
-    for key in sorted(stat.keys()):
-        if stat[key]:
-            print("{}: {:d}".format(key, stat[key]))
