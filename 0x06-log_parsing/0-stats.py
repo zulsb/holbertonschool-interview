@@ -21,11 +21,11 @@ if __name__ == "__main__":
                 if status_code == key:
                     stat[key] += 1
             if ctr == 10:
-                ctr = 0
                 print("File size: {:d}".format(total_size))
                 for key in sorted(stat.keys()):
                     if stat[key]:
                         print("{}: {:d}".format(key, stat[key]))
+                ctr = 0
 
     except KeyboardInterrupt:
         print("File size: {:d}".format(total_size))
