@@ -32,7 +32,4 @@ if __name__ == "__main__":
         for key in sorted(stat.keys()):
             if stat[key]:
                 print("{}: {:d}".format(key, stat[key]))
-    print("File size: {:d}".format(total_size))
-    for key in sorted(stat.keys()):
-        if stat[key]:
-            print("{}: {:d}".format(key, stat[key]))
+        raise
