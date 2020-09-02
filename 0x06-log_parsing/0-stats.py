@@ -22,10 +22,15 @@ try:
             print("File size: ", total_size)
             for key in sorted(stat.keys()):
                 if stat[key]:
-                    print("{}: {}".format(key, stat[key]))
+                    print("{:s}: {:d}".format(key, stat[key]))
 
 except KeyboardInterrupt:
+    print("File size: ", total_size)
     for key in sorted(stat.keys()):
         if stat[key]:
-            print("{}: {}".format(key, stat[key]))
+            print("{:s}: {:d}".format(key, stat[key]))
     raise
+print("File size: ", total_size)
+for key in sorted(stat.keys()):
+    if stat[key]:
+        print("{:s}: {:d}".format(key, stat[key]))
