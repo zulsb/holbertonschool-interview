@@ -10,7 +10,7 @@ total_size = 0
 
 def prints():
     """Print metrics"""
-    print("File size: ", total_size)
+    print("File size: {:d}".format(total_size))
     for key in sorted(stat.keys()):
         if stat[key]:
             print("{}: {:d}".format(key, stat[key]))
