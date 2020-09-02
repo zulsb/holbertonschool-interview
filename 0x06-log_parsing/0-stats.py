@@ -7,14 +7,6 @@ stat = {"200": 0, "301": 0, "400": 0, "401": 0,
 ctr = 0
 total_size = 0
 
-
-def prints():
-    """Print metrics"""
-    print("File size: {:d}".format(total_size))
-    for key in sorted(stat.keys()):
-        if stat[key]:
-            print("{}: {:d}".format(key, stat[key]))
-
 try:
     for line in stdin:
         status_code = line.split('"')[2].split(" ")[1]
@@ -27,9 +19,18 @@ try:
                 stat[key] += 1
         if ctr == 10:
             ctr = 0
-            prints()
+            print("File size: {:d}".format(total_size))
+            for key in sorted(stat.keys()):
+                if stat[key]:
+                    print("{}: {:d}".format(key, stat[key]))
 
 except KeyboardInterrupt:
-    prints()
+    print("File size: {:d}".format(total_size))
+    for key in sorted(stat.keys()):
+        if stat[key]:
+            print("{}: {:d}".format(key, stat[key]))
     raise
-prints()
+print("File size: {:d}".format(total_size))
+for key in sorted(stat.keys()):
+    if stat[key]:
+        print("{}: {:d}".format(key, stat[key]))
