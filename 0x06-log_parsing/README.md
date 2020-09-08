@@ -1,4 +1,4 @@
-![Banner]()
+![Log Parsing](https://user-images.githubusercontent.com/7723544/92507917-597a5300-f1cd-11ea-8b7e-80961e0b70d7.gif)
 
 ## Description
 
