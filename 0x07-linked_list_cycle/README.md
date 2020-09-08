@@ -1,4 +1,4 @@
-![Banner]()
+![Linked list cycle](https://user-images.githubusercontent.com/7723544/92507654-ebce2700-f1cc-11ea-9524-dbd05cd03963.gif)
 
 ## Description
 
