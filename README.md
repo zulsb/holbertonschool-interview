@@ -19,6 +19,10 @@ Projects carried out in the specialization for the preparation of interviews and
 * Function that computes the sum of two sandpiles.
 #### [0x05. Linked list palindrome](./0x05-linked_list_palindrome)
 * Function in C that checks if a singly linked list is a palindrome.
+#### [0x06. Log Parsing](./0x06-log_parsing)
+* Script that reads stdin line by line and computes metrics.
+#### [0x07. Linked list cycle](./0x07-linked_list_cycle)
+* Function in C that checks if a singly linked list has a cycle in it.
 
 ---
 
