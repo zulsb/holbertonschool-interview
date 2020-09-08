@@ -11,11 +11,11 @@ int check_cycle(listint_t *list)
 {
 	listint_t *h = list, *l = list;
 
-	while (l && h->next)
+	while (l && l->next)
 	{
 		h = h->next;
 		l = l->next->next;
-		if (l == h)
+		if (h == l)
 			return (1);
 	}
 	return (0);
