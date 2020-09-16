@@ -23,6 +23,8 @@ Projects carried out in the specialization for the preparation of interviews and
 * Script that reads stdin line by line and computes metrics.
 #### [0x07. Linked list cycle](./0x07-linked_list_cycle)
 * Function in C that checks if a singly linked list has a cycle in it.
+#### [0x08. Palindrome integer](./0x08-palindrome_integer)
+* Function that checks whether or not a given unsigned integer is a palindrome.
 
 ---
 
