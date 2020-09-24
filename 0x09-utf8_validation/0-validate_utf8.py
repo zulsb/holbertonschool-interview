@@ -16,8 +16,6 @@ def validUTF8(data):
         i = format(i, "#010b")[-8:]
         if validation != 0:
             validation -= 1
-            if not i.startswith("10"):
-                return False
         elif i[0] == "1":
             if validation == 1 or validation > 4:
                 return False
