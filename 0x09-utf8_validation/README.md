@@ -1,4 +1,4 @@
-![]()
+![Validación UTF-8](https://user-images.githubusercontent.com/7723544/94103478-6a94a800-fdfa-11ea-9f07-4e2852da7fab.gif)
 
 ## Description
 
