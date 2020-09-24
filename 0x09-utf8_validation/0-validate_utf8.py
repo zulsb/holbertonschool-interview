@@ -19,9 +19,9 @@ def validUTF8(data):
             if not i.startswith("10"):
                 return False
         elif i[0] == "1":
-            validation = len(i.split("0")[0])
             if validation == 1 or validation > 4:
                 return False
+            validation = len(i.split("0")[0])
             validation -= 1
 
     return True if validation == 0 else False
