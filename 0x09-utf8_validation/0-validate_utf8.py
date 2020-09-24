@@ -12,6 +12,4 @@ def validUTF8(data):
     """
 
     validation = 0
-    
-
     return True if validation == 0 else False
