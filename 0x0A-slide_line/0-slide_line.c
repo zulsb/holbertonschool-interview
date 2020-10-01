@@ -70,6 +70,13 @@ void left(int *line, int size_aux)
 			}
 		}
 	}
+	if (j == 0)
+	{
+		line[j] = aux;
+		j++;
+	}
+	for (; j < size_aux; j++)
+		line[j] = 0;
 }
 
 /**
@@ -112,4 +119,11 @@ void right(int *line, int size_aux)
 			}
 		}
 	}
+	if (j == size_aux - 1)
+	{
+		line[j] = aux;
+		j--;
+	}
+	for (; j >= 0; j--)
+		line[j] = 0;
 }
