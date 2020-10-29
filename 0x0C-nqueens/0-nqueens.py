@@ -29,7 +29,7 @@ def queens_potitions(N, r, queens):
 
 if __name__ == "__main__":
 
-    if len(sys.argv) > 2:
+    if len(sys.argv) != 2:
         print("Usage: nqueens N")
         exit(1)
 
