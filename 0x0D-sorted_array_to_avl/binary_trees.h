@@ -41,5 +41,4 @@ void binary_tree_print(const binary_tree_t *tree);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 avl_t *builder(avl_t *parent, int *array, size_t start, size_t end);
 
-
 #endif
