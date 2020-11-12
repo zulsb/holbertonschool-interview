@@ -25,7 +25,7 @@ skiplist_t *linear_skip(skiplist_t *list, int value)
 		prevNode = NodeExp;
 		if (NodeExp->express == NULL)
 		{
-			for (; NodeExp->next; )
+			while (NodeExp->next)
 				NodeExp = NodeExp->next;
 			break;
 		}
