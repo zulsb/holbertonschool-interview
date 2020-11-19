@@ -11,7 +11,7 @@ function getRequestStar (charactersUrl) {
   });
 }
 
-async function getCharactersName () {
+async function charNameStarWars () {
   const response = await getRequestStar(url);
   for (let i = 0; i < response.characters.length; i++) {
     const char = await getRequestStar(response.characters[i]);
@@ -19,4 +19,4 @@ async function getCharactersName () {
   }
 }
 
-getCharactersName();
+charNameStarWars();
