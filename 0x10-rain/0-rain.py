@@ -11,9 +11,9 @@ def rain(walls):
         Return:
             Integer indicating total amount of rainwater retained.
     """
-    preWall = 0
     gap = []
     retain = 0
+    preWall = 0
 
     for pos, w in enumerate(walls):
         if len(walls) < 1:
