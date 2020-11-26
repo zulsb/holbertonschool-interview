@@ -21,6 +21,8 @@ def rain(walls):
         if w != 0 and preWall != 0:
             if w >= preWall:
                 retain += (preWall * len(gap)) - sum(gap)
+                gap = []
+                preWall = w
         if w != 0 and preWall == 0:
             preWall = w
         if w == 0 and preWall != 0:
