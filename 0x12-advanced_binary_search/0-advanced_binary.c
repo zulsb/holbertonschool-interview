@@ -13,7 +13,6 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	if (!array || size < 1)
 		return (-1);
-
 	return (search_binary(array, 0, size, value));
 }
 
