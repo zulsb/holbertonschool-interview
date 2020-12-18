@@ -8,6 +8,8 @@ def count_words(subreddit, word_list):
 
     dic = {}
 
+    for word in word_list:
+        dic[word] = 0
     for key, val in sorted(dic.items(), key=lambda x: x[1], reverse=True):
         if val != 0:
             print("{}: {}".format(key, val))
