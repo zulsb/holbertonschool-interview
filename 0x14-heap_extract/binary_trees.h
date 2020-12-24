@@ -1,5 +1,5 @@
-#ifndef _BINARYS_H
-#define _BINARYS_H
+#ifndef _BINARYS_TREES_H
+#define _BINARYS_TREES_H
 
 /**========================================================================*/
 /**-LIBRARIES--------------------------------------------------------------*/
@@ -40,4 +40,4 @@ void binary_tree_print(const binary_tree_t *);
 int heap_extract(heap_t **root);
 heap_t *swap(heap_t *tmp);
 
-#endif /* _BINARYS_H_ */
+#endif /* _BINARYS_TREES_H_ */
