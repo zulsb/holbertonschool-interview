@@ -1,34 +1,34 @@
 #include "binary_trees.h"
 
 /**
- * swap - Function that sort the binary tree.
- * @tmp: Is a pointer to the heap root.
+ * swap - Function taht sort the binary tree.
+ * @aux: Is a pointer to the heap root.
  *
  * Return: The pointer to last node.
  **/
 
-heap_t *swap(heap_t *tmp)
+heap_t *swap(heap_t *aux)
 {
 	int value;
 
-	while (tmp->left || tmp->right)
+	while (aux->left || aux->right)
 	{
-		if (tmp->right == NULL || tmp->left->n > tmp->right->n)
+		if (aux->right == NULL || aux->left->n > aux->right->n)
 		{
-			value = tmp->n;
-			tmp->n = tmp->left->n;
-			tmp->left->n = value;
-			tmp = tmp->left;
+			value = aux->n;
+			aux->n = aux->left->n;
+			aux->left->n = value;
+			aux = aux->left;
 		}
-		else if (tmp->left == NULL || tmp->left->n < tmp->right->n)
+		else if (aux->left == NULL || aux->left->n < aux->right->n)
 		{
-			value = tmp->n;
-			tmp->n = tmp->right->n;
-			tmp->right->n = value;
-			tmp = tmp->right;
+			value = aux->n;
+			aux->n = aux->right->n;
+			aux->right->n = value;
+			aux = aux->right;
 		}
 	}
-	return (tmp);
+	return (aux);
 }
 
 /**
@@ -40,13 +40,14 @@ heap_t *swap(heap_t *tmp)
 
 int heap_extract(heap_t **root)
 {
-	heap_t *node, *aux = *root;
+	heap_t *node, *aux;
 	size_t height;
 	int value;
 
 	if (root == NULL || *root == NULL)
 		return (0);
 
+	aux = *root;
 	value = aux->n;
 	if (!aux->left && !aux->right)
 	{
