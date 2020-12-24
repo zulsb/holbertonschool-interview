@@ -3,8 +3,10 @@
 /**
  * binary_tree_height - Measures the height of a binary tree.
  * @tree: pointer to the tree.
+ *
  * Return: height of the tree.
  */
+
 static size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t left, right;
@@ -19,15 +21,16 @@ static size_t binary_tree_height(const binary_tree_t *tree)
 }
 
 /**
- * preorder - goes through a binary tree using pre-order traversal.
+ * order - Function that pre-order traversal.
+ * @root: pointer to the root node of the tree to traverse.
+ * @node: pointer to node in the tree.
+ * @height: height of the tree.
+ * @level: level of the tree.
  *
- * @root: pointer to the root node of the tree to traverse
- * @node: pointer to node in the tree
- * @height: height of the tree
- * @level: level of the tree
+ * Return: Nothing.
  **/
 
-void preorder(heap_t *root, heap_t **node, size_t height, size_t level)
+void order(heap_t *root, heap_t **node, size_t height, size_t level)
 {
 	if (root != NULL)
 	{
@@ -37,10 +40,10 @@ void preorder(heap_t *root, heap_t **node, size_t height, size_t level)
 		level++;
 
 		if (root->left != NULL)
-			preorder(root->left, node, height, level);
+			order(root->left, node, height, level);
 
 		if (root->right != NULL)
-			preorder(root->right, node, height, level);
+			order(root->right, node, height, level);
 	}
 }
 
@@ -100,7 +103,7 @@ int heap_extract(heap_t **root)
 	}
 
 	h = binary_tree_height(aux);
-	preorder(aux, &node, h, 0);
+	order(aux, &node, h, 0);
 	aux = swap(aux);
 	aux->n = node->n;
 
@@ -111,6 +114,5 @@ int heap_extract(heap_t **root)
 		node->parent->left = NULL;
 
 	free(node);
-
 	return (value);
 }
