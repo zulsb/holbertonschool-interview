@@ -38,6 +38,5 @@ void binary_tree_print(const binary_tree_t *);
 
 /** 0. Heap - Extract */
 int heap_extract(heap_t **root);
-heap_t *swap(heap_t *tmp);
 
 #endif /* _BINARYS_TREES_H_ */
