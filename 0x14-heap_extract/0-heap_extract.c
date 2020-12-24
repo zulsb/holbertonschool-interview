@@ -86,7 +86,7 @@ heap_t *swap(heap_t *aux)
 int heap_extract(heap_t **root)
 {
 	heap_t *node, *aux;
-	size_t h;
+	size_t height;
 	int value;
 
 	if (root == NULL || *root == NULL)
@@ -100,8 +100,8 @@ int heap_extract(heap_t **root)
 		return (value);
 	}
 
-	h = binary_tree_height(aux);
-	order(aux, &node, h, 0);
+	height = binary_tree_height(aux);
+	order(aux, &node, height, 0);
 	aux = swap(aux);
 	aux->n = node->n;
 
