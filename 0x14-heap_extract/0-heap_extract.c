@@ -1,12 +1,11 @@
 #include "binary_trees.h"
 
 /**
- * height - Function that measures the height.
+ * binary_tree_height - Measures the height of a binary tree.
  * @tree: pointer to the tree.
- *
  * Return: height of the tree.
  */
-static size_t height(const binary_tree_t *tree)
+static size_t binary_tree_height(const binary_tree_t *tree)
 {
 	size_t left, right;
 
@@ -14,13 +13,13 @@ static size_t height(const binary_tree_t *tree)
 		return (0);
 	if (!tree->left && !tree->right)
 		return (0);
-	left = 1 + height(tree->left);
-	right = 1 + height(tree->right);
+	left = 1 + binary_tree_height(tree->left);
+	right = 1 + binary_tree_height(tree->right);
 	return (right > left ? right : left);
 }
 
 /**
- * order - Fucntion that pre-order traversal.
+ * order - Function that pre-order traversal. *
  * @root: pointer to the root node of the tree to traverse.
  * @node: pointer to node in the tree.
  * @height: height of the tree.
@@ -35,18 +34,22 @@ void order(heap_t *root, heap_t **node, size_t height, size_t level)
 	{
 		if (height == level)
 			*node = root;
+
 		level++;
+
 		if (root->left != NULL)
 			order(root->left, node, height, level);
+
 		if (root->right != NULL)
 			order(root->right, node, height, level);
 	}
 }
 
 /**
- * swap - sort the binary tree.
- * @aux: pointer to the heap root.
- * Return: pointer to last node.
+ * swap - Fucntion that sort the binary tree.
+ * @aux: Pointer to the heap root.
+ *
+ * Return: The pointer to last node.
  **/
 
 heap_t *swap(heap_t *aux)
@@ -83,11 +86,12 @@ heap_t *swap(heap_t *aux)
 int heap_extract(heap_t **root)
 {
 	heap_t *node, *aux;
-	size_t height;
+	size_t h;
 	int value;
 
 	if (root == NULL || *root == NULL)
 		return (0);
+
 	aux = *root;
 	value = aux->n;
 	if (!aux->left && !aux->right)
@@ -96,8 +100,8 @@ int heap_extract(heap_t **root)
 		return (value);
 	}
 
-	height = height(aux);
-	order(aux, &node, height, 0);
+	h = binary_tree_height(aux);
+	order(aux, &node, h, 0);
 	aux = swap(aux);
 	aux->n = node->n;
 
