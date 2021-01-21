@@ -15,8 +15,6 @@ def rotate_2d_matrix(matrix):
 
     for iter in range(len(matrix[0])):
         aux = []
-
         for row in reversed(c):
             aux.append(row[iter])
-
         matrix[iter] = aux
