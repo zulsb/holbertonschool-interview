@@ -27,6 +27,8 @@ listint_t *find_listint_loop(listint_t *head)
 			two = head;
 			one = head;
 		}
+		two = two->next;
+		one = one->next->n;
 	}
 	return (NULL);
 }
