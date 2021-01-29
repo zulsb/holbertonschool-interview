@@ -11,6 +11,10 @@ def rain(walls):
         Return:
             Integer indicating total amount of rainwater retained.
     """
+    drops = 0
+
+    if len(walls) < 1:
+        return 0
     for wa in range(len(walls)):
         ini = walls[wa]
         for wal in range(wa):
