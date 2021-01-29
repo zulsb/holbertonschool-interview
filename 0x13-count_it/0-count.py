@@ -33,18 +33,19 @@ def count_words(subreddit, word_list, after=None, dicti={}):
     response = requests.get("https://www.reddit.com/r/{}/hot/.json".
                             format(subreddit), headers=headers, params=params)
 
-    if len(dicti) == 0:
-        for hot_word in word_list:
-            dicti[hot_word] = 0
-    if response:
-        arespon = response.json().get("data").get("after")
-        if arespon:
-            count_words(subreddit, word_list,
-                        after=arespon, dicti=dicti)
-            fillrecurse(response, word_list, dicti, after)
-            return dicti
-        else:
-            fillrecurse(response, word_list, dicti, after)
-            return dicti
-    else:
+    try:
+        if len(dicti) == 0:
+            for hot_word in word_list:
+                dicti[hot_word] = 0
+        if response:
+            arespon = response.json().get("data").get("after")
+            if arespon:
+                count_words(subreddit, word_list,
+                            after=arespon, dicti=dicti)
+                fillrecurse(response, word_list, dicti, after)
+                return dicti
+            else:
+                fillrecurse(response, word_list, dicti, after)
+                return dicti
+    except Exception:
         return None
