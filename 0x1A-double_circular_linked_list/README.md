@@ -7,7 +7,7 @@ Function that add a new node to the beginning and to the end of a double circula
 ---
 
 ## Content
-#### [0. Add Nodes](./0-add_node.c) 
+#### 0. Add Nodes --> [Function.](./0-add_node.c) 
 
 ---
 
