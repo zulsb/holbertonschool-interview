@@ -7,7 +7,7 @@ Function that checks if a binary tree is a valid AVL Tree.
 ---
 
 ## Content
-#### 0.Is AVL --> [Function.](./0-binary_tree_is_avl.c) 
+#### 0. Is AVL --> [Function.](./0-binary_tree_is_avl.c) 
 
 ---
 
